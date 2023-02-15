@@ -20,14 +20,21 @@
 }
 
 body {
-  background: #0e0e0e;
+  background: $background-color;
   margin: 0 4vw;
   color: #fff;
 }
 
 nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   position: sticky;
-  margin: 20px;
+  width: 100%;
+  top: 0;
+  padding: 15px;
+  background-color: $background-color;
+  border-bottom: #262626 solid 1px;
 
   a {
     color: #fff;
@@ -101,11 +108,11 @@ nav {
   justify-content: space-between;
   width: 100%;
   overflow-x: hidden;
+  animation: slide 10s linear infinite;
 
   &__img {
     margin: 10px;
     filter: invert(21%) sepia(67%) saturate(0%) hue-rotate(207deg) brightness(64%) contrast(70%);
-    animation: slide 15s linear 1;
   }
 
   &::-webkit-scrollbar {
@@ -114,10 +121,10 @@ nav {
 
   @keyframes slide {
     0% {
-      transform: translate3d(0, 0, 0);
+      transform: translateX(0);
     }
     100% {
-      transform: translate3d(-1500px, 0, 0); /* The image width */
+      transform: translateX(-50%);
     }
   }
 }
