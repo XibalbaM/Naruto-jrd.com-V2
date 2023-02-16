@@ -82,8 +82,23 @@ nav {
   margin: 20px;
 }
 
+.subtitle {
+  font-weight: 400;
+  font-size: 2.5em;
+
+  &__date {
+    font-weight: 200;
+  }
+}
+
 .slogan {
-  font-size: 8em;
+  font-size: 6.5em;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.slogan__separator {
+  margin: 30px 0;
 }
 
 .presentation {
@@ -97,7 +112,8 @@ nav {
     margin-right: 10%;
 
     &__title {
-      font-size: 3em;
+      font-size: 1.5em;
+      font-weight: 400;
     }
   }
 }
@@ -108,11 +124,14 @@ nav {
   justify-content: space-between;
   width: 100%;
   overflow-x: hidden;
-  animation: slide 10s linear infinite;
 
   &__img {
     margin: 10px;
     filter: invert(21%) sepia(67%) saturate(0%) hue-rotate(207deg) brightness(64%) contrast(70%);
+    animation-name: slide;
+    animation-duration: 600s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
   }
 
   &::-webkit-scrollbar {
@@ -124,7 +143,7 @@ nav {
       transform: translateX(0);
     }
     100% {
-      transform: translateX(-50%);
+      transform: translateX(-6500px);
     }
   }
 }

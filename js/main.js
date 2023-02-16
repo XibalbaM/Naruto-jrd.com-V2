@@ -29,9 +29,11 @@ const clanList = [
 
 const clanBar = document.getElementsByClassName("clan-bar")[0];
 
-clanList.forEach(clan => {
-	const clanImg = document.createElement("img");
-	clanImg.src = `img/clans/${clan}`;
-	clanImg.className = "clan-bar__img";
-	clanBar.appendChild(clanImg);
-});
+for (let i = 0; i < 10; i++) {
+	clanList.forEach(clan => {
+		const clanImg = document.createElement("img");
+		clanImg.src = `img/clans/${clan}`;
+		clanImg.className = "clan-bar__img";
+		clanBar.appendChild(clanImg);
+	});
+}
