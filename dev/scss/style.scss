@@ -2,6 +2,8 @@
 @import "utils/functions";
 @import "utils/mixins";
 
+@import "vendors/bootstrap.grid.min";
+
 @import "base/typography";
 
 .font-normal {
@@ -74,8 +76,22 @@ nav {
   height: fit-content;
 }
 
+.footer {
+
+  &-link {
+    font-weight: 700;
+    font-size: 2em;
+
+    &:hover, &:focus, &:active, &:visited {
+      text-decoration: underline;
+    }
+  }
+}
+
 .credits {
-  word-spacing: 100px;
+  color: #424242;
+  word-spacing: 1.5em;
+  font-weight: 400;
 }
 
 .main-title {
@@ -83,7 +99,7 @@ nav {
 }
 
 .subtitle {
-  font-weight: 400;
+  font-weight: 450;
   font-size: 2.5em;
 
   &__date {
@@ -93,7 +109,7 @@ nav {
 
 .slogan {
   font-size: 6.5em;
-  font-weight: 700;
+  font-weight: 675;
   margin-bottom: 0;
 }
 
@@ -112,7 +128,20 @@ nav {
     margin-right: 10%;
 
     &__title {
-      font-size: 1.5em;
+      display: flex;
+      flex-direction: row;
+
+      &__icon {
+        margin-right: 10px;
+      }
+      &__text {
+        font-size: 2em;
+        font-weight: 450;
+      }
+    }
+
+    &__text {
+      font-size: 1.3em;
       font-weight: 400;
     }
   }
@@ -144,6 +173,18 @@ nav {
     }
     100% {
       transform: translateX(-6500px);
+    }
+  }
+}
+
+.infos {
+
+  margin-top: 20px;
+
+  &__section {
+
+    &--nekketsu {
+      background-image: url("../img/nekketsu-bg.jpg");
     }
   }
 }
