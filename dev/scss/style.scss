@@ -10,7 +10,7 @@
   font-family: $font-neue-montreal;
 }
 
-.text-important {
+.font-important {
   font-family: $font-monument-extended;
 }
 
@@ -37,6 +37,7 @@ nav {
   padding: 15px;
   background-color: $background-color;
   border-bottom: #262626 solid 1px;
+  z-index: 10;
 
   a {
     color: #fff;
@@ -76,26 +77,9 @@ nav {
   height: fit-content;
 }
 
-.footer {
-
-  &-link {
-    font-weight: 700;
-    font-size: 2em;
-
-    &:hover, &:focus, &:active, &:visited {
-      text-decoration: underline;
-    }
-  }
-}
-
-.credits {
-  color: #424242;
-  word-spacing: 1.5em;
-  font-weight: 400;
-}
-
 .main-title {
-  margin: 20px;
+  margin: 20px 0;
+  width: 100%;
 }
 
 .subtitle {
@@ -123,26 +107,35 @@ nav {
   justify-content: space-between;
   width: 100%;
 
-  &__element {
+  &__section {
     width: 40%;
     margin-right: 10%;
 
-    &__title {
+    h2 {
+      @extend .text-orange-gradient;
+      @extend .font-important;
+      font-size: 2em;
+      font-weight: 450;
+    }
+
+    p {
+      font-size: 1.3em;
+      font-weight: 400;
+    }
+
+    &__element {
+
       display: flex;
       flex-direction: row;
 
       &__icon {
-        margin-right: 10px;
-      }
-      &__text {
-        font-size: 2em;
-        font-weight: 450;
-      }
-    }
 
-    &__text {
-      font-size: 1.3em;
-      font-weight: 400;
+        align-self: start;
+        margin: 4%;
+      }
+
+      &__content {
+      }
     }
   }
 }
@@ -179,12 +172,54 @@ nav {
 
 .infos {
 
-  margin-top: 20px;
+  margin: 3% 0;
 
   &__section {
+    height: 50vh;
 
     &--tenketsu {
       background-image: url("../img/tenketsu-bg.jpg");
+      padding: 3%;
+
+      img {
+        border-radius: 25px;
+      }
+
+      h2 {
+        @extend .text-orange-gradient;
+        @extend .font-important;
+        font-size: 2em;
+        font-weight: 650;
+      }
+
+      p {
+        @extend .font-normal;
+        font-weight: 450;
+
+        span {
+          @extend .text-orange-gradient;
+          @extend .font-important;
+          font-weight: 650;
+        }
+      }
     }
   }
+}
+
+.footer {
+
+  &-link {
+    font-weight: 700;
+    font-size: 2em;
+
+    &:hover, &:focus, &:active, &:visited {
+      text-decoration: underline;
+    }
+  }
+}
+
+.credits {
+  color: #424242;
+  word-spacing: 1.5em;
+  font-weight: 400;
 }

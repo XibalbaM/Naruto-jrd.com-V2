@@ -1,16 +1,3 @@
-import Swiper from "./swiper-bundle.esm.browser.min.js";
-
-//Images carousel
-const swiper = new Swiper(".swiper", {
-
-	slidesPerView: 1,
-	centeredSlides: true,
-	loop: true,
-	effect: "cube",
-	grabCursor: true,
-	autoplay: false,
-});
-
 //Clan list
 const clanList = [
 	"kamon_aburame.svg",
