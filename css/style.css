@@ -1162,7 +1162,7 @@ nav a:hover, nav a:focus, nav a:active, nav a:visited {
 .images img {
   height: 50vh;
   width: auto;
-  margin: 10px;
+  margin: 2%;
 }
 .images::-webkit-scrollbar {
   display: none;
@@ -1287,6 +1287,7 @@ nav a:hover, nav a:focus, nav a:active, nav a:visited {
   color: #424242;
   word-spacing: 1.5em;
   font-weight: 400;
+  font-size: 0.5em;
 }
 
 /*# sourceMappingURL=style.css.map */
