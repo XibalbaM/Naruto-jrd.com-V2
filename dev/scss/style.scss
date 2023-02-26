@@ -40,13 +40,13 @@ nav {
   z-index: 10;
 
   a {
-    color: #fff;
-    text-decoration: none;
-    margin: 10px;
+	color: #fff;
+	text-decoration: none;
+	margin: 10px;
 
-    &:hover, &:focus, &:active, &:visited {
-      text-decoration: underline;
-    }
+	&:hover, &:focus, &:active, &:visited {
+	  text-decoration: underline;
+	}
   }
 }
 
@@ -56,20 +56,21 @@ nav {
   background: #262626;
 }
 
-/*.images {
+.images {
   display: flex;
   flex-direction: row;
   overflow-x: scroll;
   height: 10%;
 
+  img {
+	height: 50vh;
+	width: auto;
+	margin: 10px;
+  }
+
   &::-webkit-scrollbar {
     display: none;
   }
-}*/
-
-.perso-image {
-  height: 100%;
-  margin-right: 4vw;
 }
 
 .full-width {
@@ -87,7 +88,7 @@ nav {
   font-size: 2.5em;
 
   &__date {
-    font-weight: 200;
+	font-weight: 200;
   }
 }
 
@@ -108,35 +109,35 @@ nav {
   width: 100%;
 
   &__section {
-    width: 40%;
-    margin-right: 10%;
+	width: 40%;
+	margin-right: 10%;
 
-    h2 {
-      @extend .text-orange-gradient;
-      @extend .font-important;
-      font-size: 2em;
-      font-weight: 450;
-    }
+	h2 {
+	  @extend .text-orange-gradient;
+	  @extend .font-important;
+	  font-size: 2em;
+	  font-weight: 450;
+	}
 
-    p {
-      font-size: 1.3em;
-      font-weight: 400;
-    }
+	p {
+	  font-size: 1.3em;
+	  font-weight: 400;
+	}
 
-    &__element {
+	&__element {
 
-      display: flex;
-      flex-direction: row;
+	  display: flex;
+	  flex-direction: row;
 
-      &__icon {
+	  &__icon {
 
-        align-self: start;
-        margin: 4%;
-      }
+		align-self: start;
+		margin: 4%;
+	  }
 
-      &__content {
-      }
-    }
+	  &__content {
+	  }
+	}
   }
 }
 
@@ -148,25 +149,25 @@ nav {
   overflow-x: hidden;
 
   &__img {
-    margin: 10px;
-    filter: invert(21%) sepia(67%) saturate(0%) hue-rotate(207deg) brightness(64%) contrast(70%);
-    animation-name: slide;
-    animation-duration: 600s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+	margin: 10px;
+	filter: invert(21%) sepia(67%) saturate(0%) hue-rotate(207deg) brightness(64%) contrast(70%);
+	animation-name: slide;
+	animation-duration: 600s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
   }
 
   &::-webkit-scrollbar {
-    display: none;
+	display: none;
   }
 
   @keyframes slide {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-6500px);
-    }
+	0% {
+	  transform: translateX(0);
+	}
+	100% {
+	  transform: translateX(-6500px);
+	}
   }
 }
 
@@ -175,46 +176,46 @@ nav {
   margin: 3% 0;
 
   &__section {
-    height: 50vh;
+	height: 50vh;
 
-    &--tenketsu {
-      background-image: url("../img/tenketsu-bg.jpg");
-      padding: 3%;
+	&--tenketsu {
+	  background-image: url("../img/tenketsu-bg.jpg");
+	  padding: 3%;
 
-      img {
-        border-radius: 25px;
-      }
+	  img {
+		border-radius: 25px;
+	  }
 
-      h2 {
-        @extend .text-orange-gradient;
-        @extend .font-important;
-        font-size: 2em;
-        font-weight: 650;
-      }
+	  h2 {
+		@extend .text-orange-gradient;
+		@extend .font-important;
+		font-size: 2em;
+		font-weight: 650;
+	  }
 
-      p {
-        @extend .font-normal;
-        font-weight: 450;
+	  p {
+		@extend .font-normal;
+		font-weight: 450;
 
-        span {
-          @extend .text-orange-gradient;
-          @extend .font-important;
-          font-weight: 650;
-        }
-      }
-    }
+		span {
+		  @extend .text-orange-gradient;
+		  @extend .font-important;
+		  font-weight: 650;
+		}
+	  }
+	}
   }
 }
 
 .footer {
 
-  &-link {
-    font-weight: 700;
-    font-size: 2em;
+  font-weight: 700;
+  font-size: 2em;
 
-    &:hover, &:focus, &:active, &:visited {
-      text-decoration: underline;
-    }
+  a:hover, a:focus, a:active, a:visited {
+	border-bottom: 3px solid;
+	border-image-slice: 1;
+	border-image-source: linear-gradient(267.71deg, #FFCD3C 0%, #FD6900 100%);
   }
 }
 

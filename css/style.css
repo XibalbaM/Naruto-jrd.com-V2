@@ -1153,19 +1153,19 @@ nav a:hover, nav a:focus, nav a:active, nav a:visited {
   background: #262626;
 }
 
-/*.images {
+.images {
   display: flex;
   flex-direction: row;
   overflow-x: scroll;
   height: 10%;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
-}*/
-.perso-image {
-  height: 100%;
-  margin-right: 4vw;
+}
+.images img {
+  height: 50vh;
+  width: auto;
+  margin: 10px;
+}
+.images::-webkit-scrollbar {
+  display: none;
 }
 
 .full-width {
@@ -1273,12 +1273,14 @@ nav a:hover, nav a:focus, nav a:active, nav a:visited {
   font-weight: 650;
 }
 
-.footer-link {
+.footer {
   font-weight: 700;
   font-size: 2em;
 }
-.footer-link:hover, .footer-link:focus, .footer-link:active, .footer-link:visited {
-  text-decoration: underline;
+.footer a:hover, .footer a:focus, .footer a:active, .footer a:visited {
+  border-bottom: 3px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(267.71deg, #FFCD3C 0%, #FD6900 100%);
 }
 
 .credits {
