@@ -2,8 +2,6 @@
 @import "utils/functions";
 @import "utils/mixins";
 
-@import "vendors/bootstrap.grid.min";
-
 @import "base/typography";
 
 .font-normal {
@@ -173,14 +171,24 @@ nav {
 
 .infos {
 
+  width: 100%;
   margin: 3% 0;
+  display: flex;
+  flex-direction: row;
 
   &__section {
-	height: 50vh;
+	width: 25vw;
+	height: auto;
+	margin: 0 2vw;
+	padding: 2vw;
+
+	&__group {
+	  display: flex;
+	  flex-direction: row;
+	}
 
 	&--tenketsu {
 	  background-image: url("../img/tenketsu-bg.jpg");
-	  padding: 3%;
 
 	  img {
 		border-radius: 25px;
