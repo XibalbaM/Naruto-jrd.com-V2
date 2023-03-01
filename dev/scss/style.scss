@@ -25,25 +25,33 @@ body {
   color: #fff;
 }
 
-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+.nav {
   position: sticky;
   width: 100%;
   top: 0;
-  padding: 15px;
-  background-color: $background-color;
-  border-bottom: #262626 solid 1px;
   z-index: 10;
+  background: $background-color;
 
-  a {
-	color: #fff;
-	text-decoration: none;
-	margin: 10px;
+  &__wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding: 15px;
 
-	&:hover, &:focus, &:active, &:visited {
-	  text-decoration: underline;
+	a {
+	  color: #fff;
+	  text-decoration: none;
+	  margin: 10px;
+	  font-size: 13px;
+
+	  @media (min-width: 960px) {
+
+		font-size: 15px;
+	  }
+
+	  &:hover, &:focus, &:active, &:visited {
+		text-decoration: underline;
+	  }
 	}
   }
 }
@@ -54,50 +62,33 @@ nav {
   background: #262626;
 }
 
-.images {
-  display: flex;
-  flex-direction: row;
-  overflow-x: scroll;
-  height: 10%;
-
-  img {
-	height: 50vh;
-	width: auto;
-	margin: 2%;
-  }
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
-}
-
 .full-width {
   width: 100%;
   height: fit-content;
 }
 
 .main-title {
-  margin: 20px 0;
+  margin: 25px 0;
   width: 100%;
+
+  @media (min-width: 1600px) {
+	margin: 35px 0;
+  }
 }
 
 .subtitle {
   font-weight: 450;
-  font-size: 2.5em;
-
-  &__date {
-	font-weight: 200;
-  }
+  font-size: 2.1875vw; //TODO RESPONSIVE
 }
 
 .slogan {
-  font-size: 6.5em;
+  font-size: 5.625vw; //TODO: RESPONSIVE
   font-weight: 675;
   margin-bottom: 0;
 }
 
 .slogan__separator {
-  margin: 30px 0;
+  margin: 30px 0; //TODO: RESPONSIVE
 }
 
 .presentation {
@@ -107,19 +98,19 @@ nav {
   width: 100%;
 
   &__section {
-	width: 40%;
-	margin-right: 10%;
+	width: 40%; //TODO: RESPONSIVE
+	margin-right: 10%; //TODO: RESPONSIVE
 
 	h2 {
 	  @extend .text-orange-gradient;
 	  @extend .font-important;
-	  font-size: 2em;
+	  font-size: 2em; //TODO: RESPONSIVE
 	  font-weight: 450;
 	}
 
 	p {
-	  font-size: 1.3em;
-	  font-weight: 400;
+	  font-size: 1.3em; //TODO: RESPONSIVE
+	  font-weight: 450;
 	}
 
 	&__element {
@@ -130,7 +121,7 @@ nav {
 	  &__icon {
 
 		align-self: start;
-		margin: 4%;
+		margin: 4%; //TODO: RESPONSIVE
 	  }
 
 	  &__content {
@@ -139,6 +130,7 @@ nav {
   }
 }
 
+//TODO: OPTIMIZE IF POSSIBLE
 .clan-bar {
   display: flex;
   flex-direction: row;
@@ -147,16 +139,14 @@ nav {
   overflow-x: hidden;
 
   &__img {
-	margin: 10px;
+	margin: 10px; //TODO: RESPONSIVE
+	width: auto; //TODO: RESPONSIVE
+	height: auto; //TODO: RESPONSIVE
 	filter: invert(21%) sepia(67%) saturate(0%) hue-rotate(207deg) brightness(64%) contrast(70%);
 	animation-name: slide;
 	animation-duration: 600s;
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
-  }
-
-  &::-webkit-scrollbar {
-	display: none;
   }
 
   @keyframes slide {
@@ -169,26 +159,44 @@ nav {
   }
 }
 
-.infos {
-
-  width: 100%;
-  margin: 3% 0;
+.images {
   display: flex;
   flex-direction: row;
+  overflow-x: scroll;
+  height: 10%; //TODO: RESPONSIVE
+
+  img {
+	height: 50vh; //TODO: RESPONSIVE
+	width: auto; //TODO: RESPONSIVE
+	margin: 2%; //TODO: RESPONSIVE
+  }
+
+  &::-webkit-scrollbar {
+	display: none;
+  }
+}
+
+//TODO: RESPONSIVE
+.infos {
+
+  width: 100%; //TODO: RESPONSIVE
+  margin: 3% 0; //TODO: RESPONSIVE
+  display: flex;
+  flex-direction: row; //TODO: RESPONSIVE
 
   &__section {
-	width: 25vw;
-	height: auto;
-	margin: 0 2vw;
-	padding: 2vw;
+	width: 25vw; //TODO: RESPONSIVE
+	height: auto; //TODO: RESPONSIVE
+	margin: 0 2vw; //TODO: RESPONSIVE
+	padding: 2vw; //TODO: RESPONSIVE
 
 	&__group {
 	  display: flex;
-	  flex-direction: row;
+	  flex-direction: row; //TODO: RESPONSIVE
 	}
 
 	&--tenketsu {
-	  background-image: url("../img/tenketsu-bg.jpg");
+	  background-image: url("../img/tenketsu-bg.jpg"); //TODO: RESPONSIVE
 
 	  img {
 		border-radius: 25px;
@@ -197,8 +205,8 @@ nav {
 	  h2 {
 		@extend .text-orange-gradient;
 		@extend .font-important;
-		font-size: 2em;
-		font-weight: 650;
+		font-size: 2em; //TODO: RESPONSIVE
+		font-weight: 675;
 	  }
 
 	  p {
@@ -208,7 +216,7 @@ nav {
 		span {
 		  @extend .text-orange-gradient;
 		  @extend .font-important;
-		  font-weight: 650;
+		  font-weight: 675;
 		}
 	  }
 	}
@@ -217,8 +225,8 @@ nav {
 
 .footer {
 
-  font-weight: 700;
-  font-size: 2em;
+  font-weight: 675;
+  font-size: 2em; //TODO: RESPONSIVE
 
   a:hover, a:focus, a:active, a:visited {
 	border-bottom: 3px solid;
@@ -229,7 +237,7 @@ nav {
 
 .credits {
   color: #424242;
-  word-spacing: 1.5em;
-  font-weight: 400;
-  font-size: 0.5em;
+  word-spacing: 1.5em; //TODO: RESPONSIVE
+  font-weight: 450;
+  font-size: 0.5em; //TODO: RESPONSIVE
 }

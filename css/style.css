@@ -33,24 +33,31 @@ body {
   color: #fff;
 }
 
-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+.nav {
   position: sticky;
   width: 100%;
   top: 0;
-  padding: 15px;
-  background-color: #0e0e0e;
-  border-bottom: #262626 solid 1px;
   z-index: 10;
+  background: #0e0e0e;
 }
-nav a {
+.nav__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 15px;
+}
+.nav__wrapper a {
   color: #fff;
   text-decoration: none;
   margin: 10px;
+  font-size: 13px;
 }
-nav a:hover, nav a:focus, nav a:active, nav a:visited {
+@media (min-width: 960px) {
+  .nav__wrapper a {
+    font-size: 15px;
+  }
+}
+.nav__wrapper a:hover, .nav__wrapper a:focus, .nav__wrapper a:active, .nav__wrapper a:visited {
   text-decoration: underline;
 }
 
@@ -60,41 +67,28 @@ nav a:hover, nav a:focus, nav a:active, nav a:visited {
   background: #262626;
 }
 
-.images {
-  display: flex;
-  flex-direction: row;
-  overflow-x: scroll;
-  height: 10%;
-}
-.images img {
-  height: 50vh;
-  width: auto;
-  margin: 2%;
-}
-.images::-webkit-scrollbar {
-  display: none;
-}
-
 .full-width {
   width: 100%;
   height: fit-content;
 }
 
 .main-title {
-  margin: 20px 0;
+  margin: 25px 0;
   width: 100%;
+}
+@media (min-width: 1600px) {
+  .main-title {
+    margin: 35px 0;
+  }
 }
 
 .subtitle {
   font-weight: 450;
-  font-size: 2.5em;
-}
-.subtitle__date {
-  font-weight: 200;
+  font-size: 2.1875vw;
 }
 
 .slogan {
-  font-size: 6.5em;
+  font-size: 5.625vw;
   font-weight: 675;
   margin-bottom: 0;
 }
@@ -119,7 +113,7 @@ nav a:hover, nav a:focus, nav a:active, nav a:visited {
 }
 .presentation__section p {
   font-size: 1.3em;
-  font-weight: 400;
+  font-weight: 450;
 }
 .presentation__section__element {
   display: flex;
@@ -138,14 +132,13 @@ nav a:hover, nav a:focus, nav a:active, nav a:visited {
 }
 .clan-bar__img {
   margin: 10px;
+  width: auto;
+  height: auto;
   filter: invert(21%) sepia(67%) saturate(0%) hue-rotate(207deg) brightness(64%) contrast(70%);
   animation-name: slide;
   animation-duration: 600s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-}
-.clan-bar::-webkit-scrollbar {
-  display: none;
 }
 @keyframes slide {
   0% {
@@ -154,6 +147,21 @@ nav a:hover, nav a:focus, nav a:active, nav a:visited {
   100% {
     transform: translateX(-6500px);
   }
+}
+
+.images {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  height: 10%;
+}
+.images img {
+  height: 50vh;
+  width: auto;
+  margin: 2%;
+}
+.images::-webkit-scrollbar {
+  display: none;
 }
 
 .infos {
@@ -180,17 +188,17 @@ nav a:hover, nav a:focus, nav a:active, nav a:visited {
 }
 .infos__section--tenketsu h2 {
   font-size: 2em;
-  font-weight: 650;
+  font-weight: 675;
 }
 .infos__section--tenketsu p {
   font-weight: 450;
 }
 .infos__section--tenketsu p span {
-  font-weight: 650;
+  font-weight: 675;
 }
 
 .footer {
-  font-weight: 700;
+  font-weight: 675;
   font-size: 2em;
 }
 .footer a:hover, .footer a:focus, .footer a:active, .footer a:visited {
@@ -202,7 +210,7 @@ nav a:hover, nav a:focus, nav a:active, nav a:visited {
 .credits {
   color: #424242;
   word-spacing: 1.5em;
-  font-weight: 400;
+  font-weight: 450;
   font-size: 0.5em;
 }
 
