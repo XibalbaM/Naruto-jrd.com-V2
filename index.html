@@ -2,7 +2,6 @@
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 	<head>
 		<meta charset="UTF-8">
-		<meta name="keywords"> <!--TODO Demander a Pierre-->
 		<meta name="description"
 		      content="Découvrez Naruto jdr, un jeu de rôle papier amateur adapté du célèbre univers de la série de Masashi Kishimoto.">
 		<meta name="author" content="Conçu par Pierre Ragois et développé par Xibalba">
@@ -36,14 +35,16 @@
 				</linearGradient>
 			</defs>
 		</svg>
-		<p class="font-important subtitle">
+		<p class="subtitle">
 			JEUX DE RÔLE PAPIER NON OFFICIEL <span class="text-orange-gradient">ロールプレイ</span> 2004-2023
 		</p>
 		<img src="img/hero.jpg" alt="Background" class="full-width">
 		<p class="slogan font-important text-orange-gradient">
 			RAPIDE COMME UN JET DE KUNAI, DENSE COMME UNE MISSION DE RANG S.
 		</p>
-		<img class="slogan__separator full-width" src="img/spacer-graphic.jpg" alt="Séparateur">
+		<div class="image-separator image-separator__slogan">
+			<img src="img/spacer-graphic.jpg" alt="Séparateur">
+		</div>
 		<div class="presentation">
 			<div class="presentation__section">
 				<p>
@@ -120,11 +121,11 @@
 			<img src="img/map.jpg" alt="Carte du l'univers de ce jeu de rôle">
 		</div>
 		<div class="separator"></div>
-		<div class="infos">
-			<div class="infos__section infos__section--tenketsu">
+		<!--<div class="infos">
+			<div class="infos__section infos__section&#45;&#45;tenketsu">
 				<img src="img/tenketsu-logo.jpg" alt="Logo du label TENKETSU">
 				<h2>NARUTO TENKETSU</h2>
-				<p>
+				<p class="first-text">
 					<span>TENKETSU 熱血</span> est notre label pour les contenus écrits et sélectionnés par la communauté puis
 					édités, validés et mis en page par l’équipe du projet.
 				</p>
@@ -133,8 +134,8 @@
 					format par leurs auteurs ou autrices.
 				</p>
 			</div>
-			<div class="infos__section__group">
-				<div class="infos__section">
+			<div class="infos__section infos__section&#45;&#45;other">
+				<div class="infos__section__subsection">
 					<h2 class="font-important text-orange-gradient">CONTRIBUTION</h2>
 					<p class="font-normal">
 						Pour contribuer au label TENKETSU, il suffit de créer/écrire/illustrer/coder quelque chose autour de Naruto
@@ -158,7 +159,7 @@
 						l’autrice pourra de son côté le distribuer sous la forme qu’il ou elle préfère.
 					</p>
 				</div>
-				<div class="infos__section">
+				<div class="infos__section__subsection">
 					<h2 class="font-important text-orange-gradient">RESTRICTIONS</h2>
 					<p class="font-normal">
 						Nous acceptons tout type de contenus, mais nous aimons ce qui est simple, concis, intéressant et ludique. La
@@ -181,7 +182,7 @@
 					</p>
 				</div>
 			</div>
-		</div>
+		</div>-->
 		<div class="separator"></div>
 		<footer class="footer">
 			<p class="font-important text-orange-gradient">
@@ -190,8 +191,10 @@
 				<!--<a class="text-important text-orange-gradient footer-link">→ APPRENDRE LE JEU</a><br>-->
 				→ <a href="https://www.dropbox.com/sh/ninpayam53pewzu/AACvLDrEC9Ub9pS1Co55CyOOa?dl=0">RESSOURCES</a><br>
 			</p>
-			<img class="full-width" src="img/spacer-graphic.jpg" alt="Séparateur">
-			<p class="font-normal credits">Naruto-jdr.com 2004-2023</p>
+			<div class="image-separator">
+				<img src="img/spacer-graphic.jpg" alt="Séparateur">
+			</div>
+			<p class="font-normal footer__credits">Naruto-jdr.com 2004-2023</p>
 		</footer>
 		<script type="module" src="js/main.js"></script>
 	</body>
