@@ -195,6 +195,7 @@ body {
   flex-direction: row;
   overflow-x: scroll;
   height: 10%;
+  margin: 50px 0;
 
   img {
 	height: 50vh;
@@ -207,20 +208,33 @@ body {
   }
 }
 
+.separator--images {
+  display: none;
+  @media (min-width: nth($screen-widths, 2)) {
+	display: block;
+  }
+}
+
 .infos {
 
-  width: 100%;
-  margin: 50px 0;
-  display: flex;
-  flex-direction: column;
+  margin-top: 100px;
 
-  @media (min-width: 960px) {
+  @media (min-width: nth($screen-widths, 1)) {
+	margin-top: 0;
+  }
+
+  @media (min-width: nth($screen-widths, 2)) {
+	margin-top: 50px;
+  }
+
+  @media (min-width: nth($screen-widths, 3)) {
+	display: flex;
 	flex-direction: row;
   }
 
   p {
-	@extend .text-gray;
 	@extend .font-normal;
+	@extend .text-gray;
 	font-weight: 450;
 
 	span {
@@ -245,33 +259,55 @@ body {
 	border-radius: 25px;
   }
 
+  &__group {
+
+	@media (min-width: nth($screen-widths, 6)) {
+	  display: flex;
+	  flex-direction: row;
+	}
+  }
+
   &__section {
 
-	width: 100%;
-	margin: 0;
+	margin-bottom: 60px;
 
-	@media (min-width: 960px) {
-	  width: 50%;
-	  margin: 0 6.39vw;
+	@media (min-width: nth($screen-widths, 3)) {
+	  width: 43vw;
 	}
 
-	&--other {
+	@media (min-width: nth($screen-widths, 4)) {
+	  width: 41vw;
+	}
 
-	  display: flex;
-	  flex-direction: column;
-
-	  @media (min-width: 1600px) {
-		flex-direction: row;
-		width: 66%;
-	  }
+	@media (min-width: nth($screen-widths, 6)) {
+	  width: 26vw;
+	  margin-left: 6vw;
 	}
 
 	&--tenketsu {
 
 	  background-image: url("../img/tenketsu-bg.jpg");
+	  background-repeat: no-repeat;
+	  background-size: cover;
+	  padding: 50px 15px;
+	  height: fit-content;
+	  box-sizing: border-box;
 
-	  @media (min-width: 1600px) {
-		width: 33%;
+	  @media (min-width: nth($screen-widths, 1)) {
+		padding: 50px 50px;
+	  }
+
+	  @media (min-width: nth($screen-widths, 3)) {
+		margin-right: 5vw;
+	  }
+
+	  @media (min-width: nth($screen-widths, 4)) {
+		margin-right: 9vw;
+	  }
+
+	  @media (min-width: nth($screen-widths, 6)) {
+		margin-right: 0;
+		margin-left: 0;
 	  }
 
 	  h2 {

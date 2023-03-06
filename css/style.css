@@ -181,6 +181,7 @@ body {
   flex-direction: row;
   overflow-x: scroll;
   height: 10%;
+  margin: 50px 0;
 }
 .images img {
   height: 50vh;
@@ -191,8 +192,33 @@ body {
   display: none;
 }
 
+.separator--images {
+  display: none;
+}
+@media (min-width: 720px) {
+  .separator--images {
+    display: block;
+  }
+}
+
 .infos {
   margin-top: 100px;
+}
+@media (min-width: 540px) {
+  .infos {
+    margin-top: 0;
+  }
+}
+@media (min-width: 720px) {
+  .infos {
+    margin-top: 50px;
+  }
+}
+@media (min-width: 960px) {
+  .infos {
+    display: flex;
+    flex-direction: row;
+  }
 }
 .infos p {
   font-weight: 450;
@@ -210,8 +236,30 @@ body {
 .infos img {
   border-radius: 25px;
 }
+@media (min-width: 1600px) {
+  .infos__group {
+    display: flex;
+    flex-direction: row;
+  }
+}
 .infos__section {
   margin-bottom: 60px;
+}
+@media (min-width: 960px) {
+  .infos__section {
+    width: 43vw;
+  }
+}
+@media (min-width: 1140px) {
+  .infos__section {
+    width: 41vw;
+  }
+}
+@media (min-width: 1600px) {
+  .infos__section {
+    width: 26vw;
+    margin-left: 6vw;
+  }
 }
 .infos__section--tenketsu {
   background-image: url("../img/tenketsu-bg.jpg");
@@ -219,6 +267,28 @@ body {
   background-size: cover;
   padding: 50px 15px;
   height: fit-content;
+  box-sizing: border-box;
+}
+@media (min-width: 540px) {
+  .infos__section--tenketsu {
+    padding: 50px 50px;
+  }
+}
+@media (min-width: 960px) {
+  .infos__section--tenketsu {
+    margin-right: 5vw;
+  }
+}
+@media (min-width: 1140px) {
+  .infos__section--tenketsu {
+    margin-right: 9vw;
+  }
+}
+@media (min-width: 1600px) {
+  .infos__section--tenketsu {
+    margin-right: 0;
+    margin-left: 0;
+  }
 }
 .infos__section--tenketsu h2 {
   font-size: 35px;
