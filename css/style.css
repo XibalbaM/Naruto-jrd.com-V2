@@ -192,15 +192,7 @@ body {
 }
 
 .infos {
-  width: 100%;
-  margin: 50px 0;
-  display: flex;
-  flex-direction: column;
-}
-@media (min-width: 960px) {
-  .infos {
-    flex-direction: row;
-  }
+  margin-top: 100px;
 }
 .infos p {
   font-weight: 450;
@@ -219,32 +211,14 @@ body {
   border-radius: 25px;
 }
 .infos__section {
-  width: 100%;
-  margin: 0;
-}
-@media (min-width: 960px) {
-  .infos__section {
-    width: 50%;
-    margin: 0 6.39vw;
-  }
-}
-.infos__section--other {
-  display: flex;
-  flex-direction: column;
-}
-@media (min-width: 1600px) {
-  .infos__section--other {
-    flex-direction: row;
-    width: 66%;
-  }
+  margin-bottom: 60px;
 }
 .infos__section--tenketsu {
   background-image: url("../img/tenketsu-bg.jpg");
-}
-@media (min-width: 1600px) {
-  .infos__section--tenketsu {
-    width: 33%;
-  }
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px 15px;
+  height: fit-content;
 }
 .infos__section--tenketsu h2 {
   font-size: 35px;

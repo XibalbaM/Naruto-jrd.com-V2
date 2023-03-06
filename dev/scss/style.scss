@@ -48,7 +48,7 @@
 	height: 5px;
 	width: fit-content;
 
-	@media (min-width: 720px) {
+	@media (min-width: nth($screen-widths, 2)) {
 
 	  height: 10px;
 	}
@@ -80,7 +80,7 @@ body {
 	  margin: 10px;
 	  font-size: 13px;
 
-	  @media (min-width: 960px) {
+	  @media (min-width: nth($screen-widths, 3)) {
 
 		font-size: 15px;
 	  }
@@ -116,14 +116,14 @@ body {
   justify-content: space-between;
   width: 100%;
 
-  @media (min-width: 960px) {
+  @media (min-width: nth($screen-widths, 3)) {
 	flex-direction: row;
   }
 
   &__section {
 	width: 100%;
 
-	@media (min-width: 960px) {
+	@media (min-width: nth($screen-widths, 3)) {
 	  width: 40%;
 	}
 
@@ -140,7 +140,7 @@ body {
 	  font-size: 14px;
 	  font-weight: 450;
 
-	  @media (min-width: 1320px) {
+	  @media (min-width: nth($screen-widths, 5)) {
 		font-size: 16px;
 	  }
 	}
@@ -285,13 +285,13 @@ body {
 
   font-weight: 675;
   font-size: 20px;
-  @media (min-width: 540px) {
+  @media (min-width: nth($screen-widths, 1)) {
 	font-size: 25px;
   }
-  @media (min-width: 720px) {
+  @media (min-width: nth($screen-widths, 2)) {
 	font-size: 35px;
   }
-  @media (min-width: 1140px) {
+  @media (min-width: nth($screen-widths, 4)) {
 	font-size: 50px;
   }
 
@@ -306,7 +306,7 @@ body {
 	word-spacing: 25px;
 	font-weight: 450;
 	font-size: 13px;
-	@media (min-width: 1140px) {
+	@media (min-width: nth($screen-widths, 4)) {
 	  font-size: 16px;
 	}
   }
