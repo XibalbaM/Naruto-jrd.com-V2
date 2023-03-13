@@ -1,0 +1,25 @@
+{
+  "name": "new-static-naruto-jdr",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "pnpm run prefix && pnpm run min",
+    "min-js": "minify ./js/main.js > ./dist/js/script.js",
+    "min-css": "minify ./css/style.css > ./dist/css/style.css",
+    "min-html": "minify ./index.html > ./dist/index.html",
+    "copy-img": "copyfiles ./img/**/* ./dist",
+    "copy-fonts": "copyfiles ./fonts/**/* ./dist",
+    "min": "pnpm run min-js && pnpm run min-css && pnpm run min-html && pnpm run copy-img && pnpm run copy-fonts",
+    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "copyfiles": "^2.4.1",
+    "minify": "^9.2.0",
+    "postcss": "^8.4.21",
+    "postcss-cli": "^10.1.0"
+  }
+}
