@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "build": "pnpm run prefix && pnpm run min",
-    "min-js": "minify ./js/main.js > ./dist/js/script.js",
+    "min-js": "minify ./js/main.js > ./dist/js/main.js",
     "min-css": "minify ./css/style.css > ./dist/css/style.css",
     "min-html": "minify ./index.html > ./dist/index.html",
     "copy-img": "copyfiles ./img/**/* ./dist",
