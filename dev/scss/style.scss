@@ -55,14 +55,31 @@
   }
 }
 
+.line-height-normal {
+  line-height: 100%;
+}
+
+.letter-spacing-normal {
+  letter-spacing: normal;
+}
+
 body {
   background: $background-color;
   margin: 0 4vw;
   color: #fff;
+  line-height: 160%;
+  letter-spacing: 0.03em;
 }
 
 a {
   text-decoration: none;
+}
+
+h2 {
+  @extend .text-orange-gradient;
+  @extend .font-important;
+  font-size: 20px;
+  font-weight: 450;
 }
 
 .nav {
@@ -104,11 +121,17 @@ a {
 
 .subtitle {
   @extend .font-important;
+  @extend .line-height-normal;
+  @extend .letter-spacing-normal;
   font-weight: 450;
   font-size: 2.1875vw;
 }
 
 .slogan {
+  @extend .font-important;
+  @extend .text-orange-gradient;
+  @extend .line-height-normal;
+  @extend .letter-spacing-normal;
   font-size: 6.28vw;
   font-weight: 675;
   margin-bottom: 0;
@@ -134,13 +157,6 @@ a {
 
 	@media (min-width: nth($screen-widths, 3)) {
 	  width: 40%;
-	}
-
-	h2 {
-	  @extend .text-orange-gradient;
-	  @extend .font-important;
-	  font-size: 20px;
-	  font-weight: 450;
 	}
 
 	p {
@@ -256,14 +272,8 @@ a {
 
 	&.first-text {
 	  color: #fff;
+	  line-height: 140%;
 	}
-  }
-
-  h2 {
-	@extend .text-orange-gradient;
-	@extend .font-important;
-	font-size: 20px;
-	font-weight: 675;
   }
 
   img {
@@ -322,13 +332,17 @@ a {
 	  }
 
 	  h2 {
+		@extend .line-height-normal;
+		@extend .letter-spacing-normal;
 		font-size: 35px;
+		font-weight: 675;
 	  }
 	}
   }
 }
 
 .footer {
+  @extend .line-height-normal;
 
   font-weight: 675;
   font-size: 20px;
