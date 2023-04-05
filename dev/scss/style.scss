@@ -14,18 +14,13 @@
 
 .text-orange-gradient {
   background: linear-gradient(267.71deg, #FFCD3C 0%, #FD6900 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
 .text-gray {
   color: #DFDFDF;
-}
-
-.full-width {
-  width: 100%;
-  height: fit-content;
 }
 
 .separator {
@@ -75,7 +70,7 @@ a {
   text-decoration: none;
 }
 
-h2 {
+h3 {
   @extend .text-orange-gradient;
   @extend .font-important;
   font-size: 20px;
@@ -113,18 +108,37 @@ h2 {
   }
 }
 
-.main-title {
+h1 {
+  @extend .text-orange-gradient;
+  @extend .font-important;
+  @extend .line-height-normal;
+  -webkit-text-stroke: 1px transparent;
+  -webkit-text-fill-color: $background-color;
+  font-size: 14.25vw;
   margin: 3.3vw 0;
   width: 100%;
-  height: fit-content;
+
+  @media (min-width: nth($screen-widths, 1)) {
+	font-size: 14.7vw;
+	-webkit-text-stroke-width: 2px;
+  }
+
+  @media (min-width: nth($screen-widths, 3)) {
+	font-size: 15vw;
+  }
 }
 
-.subtitle {
+h2 {
   @extend .font-important;
   @extend .line-height-normal;
   @extend .letter-spacing-normal;
   font-weight: 450;
   font-size: 2.1875vw;
+}
+
+.hero-bg {
+  width: 100%;
+  height: auto;
 }
 
 .slogan {
@@ -200,7 +214,7 @@ h2 {
 	height: auto;
 	filter: invert(21%) sepia(67%) saturate(0%) hue-rotate(207deg) brightness(64%) contrast(70%);
 	animation-name: slide;
-	animation-duration: 600s;
+	animation-duration: 300s;
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
   }
@@ -210,7 +224,7 @@ h2 {
 	  transform: translateX(0);
 	}
 	100% {
-	  transform: translateX(-6500px);
+	  transform: translateX(-3250px);
 	}
   }
 }
@@ -331,7 +345,7 @@ h2 {
 		margin-left: 0;
 	  }
 
-	  h2 {
+	  h3 {
 		@extend .line-height-normal;
 		@extend .letter-spacing-normal;
 		font-size: 35px;
