@@ -246,6 +246,7 @@ h2 {
 	height: 50vh;
 	width: auto;
 	margin: 2%;
+	background-color: white;
   }
 
   &::-webkit-scrollbar {
@@ -294,10 +295,6 @@ h2 {
 	}
   }
 
-  img {
-	border-radius: 25px;
-  }
-
   &__group {
 
 	@media (min-width: nth($screen-widths, 6)) {
@@ -325,7 +322,7 @@ h2 {
 
 	&--tenketsu {
 
-	  background-image: url("../img/tenketsu-bg.jpg");
+	  background-image: url("../img/tenketsu-bg.webp");
 	  background-repeat: no-repeat;
 	  background-size: cover;
 	  padding: 50px 15px;
@@ -347,6 +344,12 @@ h2 {
 	  @media (min-width: nth($screen-widths, 6)) {
 		margin-right: 0;
 		margin-left: 0;
+	  }
+
+	  img {
+		width: 80px;
+		height: 80px;
+		border-radius: 25px;
 	  }
 
 	  h3 {
