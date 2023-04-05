@@ -126,6 +126,10 @@ h1 {
   @media (min-width: nth($screen-widths, 3)) {
 	font-size: 15vw;
   }
+  
+  @media (min-width: nth($screen-widths, 6)) {
+	-webkit-text-stroke-width: 3px;
+  }
 }
 
 h2 {
