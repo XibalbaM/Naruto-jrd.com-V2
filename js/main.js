@@ -29,7 +29,7 @@ const clanList = [
 
 const clanBar = document.getElementsByClassName("clan-bar")[0];
 
-for (let i = 0; i < 3; i++) {
+for (let i = 0; i < 4; i++) {
 	clanList.forEach(clan => {
 		const clanImg = document.createElement("img");
 		clanImg.src = `img/clans/${clan}`;
