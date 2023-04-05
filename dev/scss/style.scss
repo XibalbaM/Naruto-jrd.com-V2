@@ -60,7 +60,7 @@
 
 body {
   background: $background-color;
-  margin: 0 4vw;
+  margin: 0 4vw 100px;
   color: #fff;
   line-height: 160%;
   letter-spacing: 0.03em;
@@ -115,8 +115,9 @@ h1 {
   -webkit-text-stroke: 1px transparent;
   -webkit-text-fill-color: $background-color;
   font-size: 14.25vw;
-  margin: 3.3vw 0;
   width: 100%;
+  margin-top: 25px;
+  margin-bottom: 15px;
 
   @media (min-width: nth($screen-widths, 1)) {
 	font-size: 14.7vw;
@@ -138,6 +139,7 @@ h2 {
   @extend .letter-spacing-normal;
   font-weight: 450;
   font-size: 2.1875vw;
+  margin-bottom: 50px;
 }
 
 .hero-bg {
@@ -152,7 +154,7 @@ h2 {
   @extend .letter-spacing-normal;
   font-size: 6.28vw;
   font-weight: 675;
-  margin-bottom: 0;
+  margin-bottom: 50px;
 }
 
 .presentation {
@@ -188,18 +190,33 @@ h2 {
 	  }
 	}
 
+	& > h3 {
+
+	  margin-top: 50px;
+	}
+
 	&__element {
 
 	  display: flex;
 	  flex-direction: row;
+	  margin-top: 50px;
+
+	  h3 {
+		margin-top: 5px;
+	  }
+
+	  &.first {
+		margin-top: 0;
+	  }
 
 	  &__icon {
 
 		align-self: start;
-		margin: 4%;
-	  }
+		margin-right: 25px;
 
-	  &__content {
+		@media (min-width: nth($screen-widths, 4)) {
+		  margin-right: 50px;
+		}
 	  }
 	}
   }
@@ -213,14 +230,18 @@ h2 {
   overflow-x: hidden;
 
   &__img {
-	margin: 10px;
-	width: auto;
-	height: auto;
+	width: 50px;
+	height: 50px;
 	filter: invert(21%) sepia(67%) saturate(0%) hue-rotate(207deg) brightness(64%) contrast(70%);
 	animation-name: slide;
 	animation-duration: 300s;
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
+	margin: 25px 25px 25px 0;
+
+	&:last-child {
+	  margin-right: 0;
+	}
   }
 
   @keyframes slide {
@@ -245,8 +266,12 @@ h2 {
   img {
 	height: 50vh;
 	width: auto;
-	margin: 2%;
 	background-color: white;
+	margin-right: 50px;
+
+	&:last-child {
+	  margin-right: 0;
+	}
   }
 
   &::-webkit-scrollbar {
@@ -350,6 +375,8 @@ h2 {
 		width: 80px;
 		height: 80px;
 		border-radius: 25px;
+		padding: 0;
+		margin: 0;
 	  }
 
 	  h3 {
@@ -357,16 +384,20 @@ h2 {
 		@extend .letter-spacing-normal;
 		font-size: 35px;
 		font-weight: 675;
+		padding: 0;
+		margin-top: 20px;
+		margin-bottom: 50px;
 	  }
 	}
   }
 }
 
 .footer {
+  margin-top: 40px;
   @extend .line-height-normal;
-
   font-weight: 675;
   font-size: 20px;
+
   @media (min-width: nth($screen-widths, 1)) {
 	font-size: 25px;
   }
@@ -381,6 +412,16 @@ h2 {
 	border-bottom: 3px solid;
 	border-image-slice: 1;
 	border-image-source: linear-gradient(267.71deg, #FFCD3C 0%, #FD6900 100%);
+  }
+
+  ul {
+	list-style: none;
+	padding: 0;
+	margin-bottom: 90px;
+
+	li {
+	  margin: 10px 0;
+	}
   }
 
   &__credits {
