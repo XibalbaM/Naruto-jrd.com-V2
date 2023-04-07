@@ -32,21 +32,27 @@
 .image-separator {
 
   width: 100%;
-  overflow-x: hidden;
+  height: 5px;
 
   &--slogan {
+	margin-top: 25px;
+	margin-bottom: 60px;
 
-	margin: 5.03vw 0;
-  }
+	@media (min-width: nth($screen-widths, 1)) {
 
-  img {
-	height: 5px;
-	width: 100%;
+	  margin-bottom: 50px;
+	}
 
 	@media (min-width: nth($screen-widths, 2)) {
 
-	  height: 10px;
+	  margin-top: 50px;
+	  margin-bottom: 100px;
 	}
+  }
+
+  @media (min-width: nth($screen-widths, 2)) {
+
+	height: 10px;
   }
 }
 
@@ -64,17 +70,12 @@ body {
   color: #fff;
   line-height: 160%;
   letter-spacing: 0.03em;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 a {
   text-decoration: none;
-}
-
-h3 {
-  @extend .text-orange-gradient;
-  @extend .font-important;
-  font-size: 20px;
-  font-weight: 450;
 }
 
 .nav {
@@ -101,7 +102,7 @@ h3 {
 		font-size: 15px;
 	  }
 
-	  &:hover, &:focus, &:active, &:visited {
+	  &:hover {
 		text-decoration: underline;
 	  }
 	}
@@ -116,20 +117,32 @@ h1 {
   -webkit-text-fill-color: $background-color;
   font-size: 14.25vw;
   width: 100%;
-  margin-top: 25px;
-  margin-bottom: 15px;
+  margin-top: 5px;
+  margin-bottom: 0;
 
   @media (min-width: nth($screen-widths, 1)) {
 	font-size: 14.7vw;
 	-webkit-text-stroke-width: 2px;
+	margin-top: 0;
   }
 
   @media (min-width: nth($screen-widths, 3)) {
 	font-size: 15vw;
+	margin-bottom: 5px;
   }
-  
+
+  @media (min-width: nth($screen-widths, 4)) {
+	margin-bottom: 10px;
+	margin-top: 30px;
+  }
+
   @media (min-width: nth($screen-widths, 6)) {
 	-webkit-text-stroke-width: 3px;
+	margin-bottom: 30px;
+  }
+
+  @media (min-width: nth($screen-widths, 7)) {
+	-webkit-text-stroke-width: 4px;
   }
 }
 
@@ -138,8 +151,30 @@ h2 {
   @extend .line-height-normal;
   @extend .letter-spacing-normal;
   font-weight: 450;
-  font-size: 2.1875vw;
-  margin-bottom: 50px;
+  font-size: 13px;
+  margin-top: 0;
+  margin-bottom: 30px;
+
+  @media (min-width: nth($screen-widths, 1)) {
+	font-size: 15px;
+  }
+
+  @media (min-width: nth($screen-widths, 2)) {
+	font-size: 2.482vw;
+	margin-bottom: 50px;
+  }
+
+  @media (min-width: nth($screen-widths, 6)) {
+	font-size: 35px;
+	margin-bottom: 55px;
+  }
+}
+
+h3 {
+  @extend .text-orange-gradient;
+  @extend .font-important;
+  font-size: 20px;
+  font-weight: 450;
 }
 
 .hero-bg {
@@ -154,7 +189,18 @@ h2 {
   @extend .letter-spacing-normal;
   font-size: 6.28vw;
   font-weight: 675;
-  margin-bottom: 50px;
+  margin-top: 25px;
+  margin-bottom: 0;
+
+  @media (min-width: nth($screen-widths, 2)) {
+
+	margin-top: 50px;
+  }
+
+  @media (min-width: nth($screen-widths, 3)) {
+
+	margin-top: 100px;
+  }
 }
 
 .presentation {
@@ -162,10 +208,11 @@ h2 {
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  margin: 50px 0;
+  margin-top: 0;
+  margin-bottom: 50px;
 
   @media (min-width: nth($screen-widths, 2)) {
-	margin: 100px 0;
+	margin-bottom: 100px;
   }
 
   @media (min-width: nth($screen-widths, 3)) {
@@ -176,7 +223,11 @@ h2 {
 	width: 100%;
 
 	@media (min-width: nth($screen-widths, 3)) {
-	  width: 40%;
+	  width: 42%;
+
+	  &:last-child {
+		width: 50%;
+	  }
 	}
 
 	p {
@@ -205,8 +256,11 @@ h2 {
 		margin-top: 5px;
 	  }
 
-	  &.first {
-		margin-top: 0;
+	  @media (min-width: nth($screen-widths, 3)) {
+
+		&:first-child {
+		  margin-top: 0;
+		}
 	  }
 
 	  &__icon {
@@ -264,10 +318,18 @@ h2 {
   scrollbar-width: none;
 
   img {
-	height: 50vh;
+	height: 40vh;
 	width: auto;
 	background-color: white;
-	margin-right: 50px;
+	margin-right: 25px;
+
+	@media (min-width: nth($screen-widths, 1)) {
+	  height: 60vh;
+	}
+
+	@media (min-width: nth($screen-widths, 4)) {
+	  margin-right: 50px;
+	}
 
 	&:last-child {
 	  margin-right: 0;
@@ -408,7 +470,7 @@ h2 {
 	font-size: 50px;
   }
 
-  a:hover, a:focus, a:active, a:visited {
+  a:hover {
 	border-bottom: 3px solid;
 	border-image-slice: 1;
 	border-image-source: linear-gradient(267.71deg, #FFCD3C 0%, #FD6900 100%);
@@ -417,7 +479,11 @@ h2 {
   ul {
 	list-style: none;
 	padding: 0;
-	margin-bottom: 90px;
+	margin-bottom: 50px;
+
+	@media (min-width: nth($screen-widths, 2)) {
+	  margin-bottom: 100px;
+	}
 
 	li {
 	  margin: 10px 0;
