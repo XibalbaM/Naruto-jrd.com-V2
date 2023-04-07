@@ -409,7 +409,7 @@ h3 {
 
 	&--tenketsu {
 
-	  background-image: url("../img/tenketsu-bg.webp");
+	  background-image: url("assets/img/tenketsu-bg.webp");
 	  background-repeat: no-repeat;
 	  background-size: cover;
 	  padding: 50px 15px;
@@ -455,9 +455,9 @@ h3 {
 }
 
 .footer {
-  margin-top: 40px;
   @extend .line-height-normal;
   font-weight: 675;
+  margin-top: 40px;
   font-size: 20px;
 
   @media (min-width: nth($screen-widths, 1)) {

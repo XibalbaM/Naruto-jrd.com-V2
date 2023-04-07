@@ -32,7 +32,7 @@ const clanBar = document.getElementsByClassName("clan-bar")[0];
 for (let i = 0; i < 3; i++) {
 	clanList.forEach(clan => {
 		const clanImg = document.createElement("img");
-		clanImg.src = `img/clans/${clan}`;
+		clanImg.src = `assets/img/clans/${clan}`;
 		clanImg.className = "clan-bar__img";
 		clanImg.alt = "Logo du clan: " + clan.substring(clan.indexOf("_") + 1, clan.indexOf("."));
 		clanBar.appendChild(clanImg);

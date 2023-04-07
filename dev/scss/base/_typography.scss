@@ -1,16 +1,25 @@
 @font-face {
   font-family: 'Monument Extended';
-  src: url("../fonts/PPMonumentExtended-Regular.woff2") format("woff2");
+  src: url("assets/fonts/PPMonumentExtended-Regular.woff2") format("woff2"),
+  url("assets/fonts/PPMonumentExtended-Regular.woff") format("woff"),
+  url("assets/fonts/PPMonumentExtended-Regular.ttf") format("truetype"),
+  url("assets/fonts/PPMonumentExtended-Regular.otf") format("opentype");
   font-weight: 450;
 }
 
 @font-face {
   font-family: 'Monument Extended';
-  src: url("../fonts/PPMonumentExtended-Bold.woff2") format("woff2");
+  src: url("assets/fonts/PPMonumentExtended-Bold.woff2") format("woff2"),
+  url("assets/fonts/PPMonumentExtended-Bold.woff") format("woff"),
+  url("assets/fonts/PPMonumentExtended-Bold.ttf") format("truetype"),
+  url("assets/fonts/PPMonumentExtended-Bold.otf") format("opentype");
   font-weight: 675;
 }
 
 @font-face {
   font-family: 'Neue Montreal';
-  src: url("../fonts/PPNeueMontreal-Regular.woff2") format("woff2");
+  src: url("assets/fonts/PPNeueMontreal-Regular.woff2") format("woff2"),
+  url("assets/fonts/PPNeueMontreal-Regular.woff") format("woff"),
+  url("assets/fonts/PPNeueMontreal-Regular.ttf") format("truetype"),
+  url("assets/fonts/PPNeueMontreal-Regular.otf") format("opentype");
 }
