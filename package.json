@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "build": "npm run prefix && npm run min",
-    "min": "npm run min-js && npm run min-css && npm run min-html && npm run min-404 && npm run copy-assets",
+    "min": "npm run min-js && npm run min-css && npm run min-html && npm run copy-assets",
     "prefix": "postcss ./style.css --use autoprefixer -d ./",
     "min-js": "minify ./main.js > ./dist/main.js",
     "min-css": "minify ./style.css > ./dist/style.css",
